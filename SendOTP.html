@@ -6,24 +6,20 @@
     <meta name="author" content="Patrick" />
     <meta
       name="description"
-      content="Change Password page for the Cars Dealership website."
+      content="Send OTP page for the Cars Dealership website."
     />
     <meta
       name="keywords"
-      content="cars, dealership, login, username, password"
+      content="cars, dealership, OTP, username, password"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>Change Password Page</title>
+    <title>Send OTP Page</title>
     <style>
-      @import url("Style/SendOTP.css");
+      @import url("Style/Style.css");
     </style>
   </head>
-  <body class="background">
+  <body class="background-sendotp">
     <div class="sendOTP-box">
-      <h2 class="sendOTP-title">Change Password</h2>
+      <h2 class="sendOTP-title">Send OTP</h2>
 
       <div>
         <input class="input-email" placeholder="Email" required type="email" />
@@ -47,14 +43,14 @@
         <button class="sendOTP-btn" onclick="Check()">Send Reset Link</button>
       </div>
       <div class="signup-section">
-        <a class="signup-link" href="/Signup.html"
+        <a class="signup-link" href="Signup.html"
           >Don't Have An Account? SignUp!
         </a>
         <div class="remember-section">
-          <a class="remember-link" href="/Login.html">Remember Password?</a>
+          <a class="remember-link" href="Login.html">Remember Password?</a>
         </div>
       </div>
     </div>
-    <script src="Script/SendOTP_Validator.js"></script>
+    <script src="Script/Script.js"></script>
   </body>
 </html>
