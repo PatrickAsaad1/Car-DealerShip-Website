@@ -89,7 +89,6 @@ body {
   transition: background-color 0.5s ease;
 }
 
-
 .register-section {
   margin-top: 20px;
   text-align: center;
@@ -126,6 +125,30 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* ===== PASSWORD WRAPPER FOR EYE ===== */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ===== EYE ICON STYLING ===== */
+.eyebox {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.eyebox:hover {
+  color: #fff;
+}
+
 /* Mobile Responsive */
 @media (max-width: 480px) {
   .login-box {
@@ -140,5 +163,14 @@ body {
 
   .login-btn {
     max-width: 100%;
+  }
+
+  .input-password {
+    padding-right: 40px;
+  }
+
+  .eyebox {
+    right: 8px;
+    font-size: 18px;
   }
 }

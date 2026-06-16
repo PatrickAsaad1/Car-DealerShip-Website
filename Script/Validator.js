@@ -1,3 +1,5 @@
+const toggleEye = document.getElementById("toggleEye");
+const passwordInput = document.getElementById("passwordInput");
 function Check() {
   let UsernameInput = document.querySelector(".input-username");
   let Username = UsernameInput.value.trim();
