@@ -322,8 +322,11 @@ function validateOTP() {
   if (UserOTP === OTP) {
     console.log("OTP Code Verified Successfully");
     document.getElementById("action").innerHTML =
-      "OTP Code Verified Successfully!";
+      "OTP Code Verified Successfully! Redirecting...";
     if (Oline) Oline.style.backgroundColor = "green";
+    setTimeout(function () {
+      window.location.href = "ChangePass.html";
+    }, 2000);
   } else {
     console.log("ERROR: Invalid OTP Code");
     document.getElementById("action").innerHTML = "Invalid OTP Code!";
