@@ -13,7 +13,7 @@ body {
 
 /* Background Styles - Each page gets its own */
 .background-login {
-  background-image: url("Assets/Cars.png");
+  background-image: url("../Assets/Cars.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -21,7 +21,7 @@ body {
 }
 
 .background-signup {
-  background-image: url("Assets/SignUp_Background.png");
+  background-image: url("../Assets/SignUp_Background.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -29,7 +29,7 @@ body {
 }
 
 .background-otp {
-  background-image: url("Assets/OTP.jpg");
+  background-image: url("../Assets/OTP.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -37,7 +37,7 @@ body {
 }
 
 .background-sendotp {
-  background-image: url("Assets/SendOTP.jpeg");
+  background-image: url("../Assets/SendOTP.jpeg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -45,7 +45,7 @@ body {
 }
 
 .background-changepass {
-  background-image: url("Assets/Cars.png");
+  background-image: url("../Assets/Cars.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
