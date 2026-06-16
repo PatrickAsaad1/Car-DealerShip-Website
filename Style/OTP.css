@@ -9,7 +9,7 @@ body {
 
 /* Background Style */
 .background {
-  background-image: url("/Assets/ChangePass.jpeg");
+  background-image: url("/Assets/OTP.jpg");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -17,14 +17,14 @@ body {
 }
 
 /* SignUp Form Style */
-.changepass-box {
+.OTP-box {
   background-color: rgba(0, 0, 0, 0.85);
   width: 380px;
   padding: 30px 40px;
   border-radius: 15px;
 }
 
-.input-email {
+.input-OTP {
   background: transparent;
   width: 100%;
   height: 50px;
@@ -33,23 +33,10 @@ body {
   color: white;
   transition: 0.6s;
   border: none;
-}
-
-/* Username Input Styling */
-.input-username {
-  background: transparent;
-  width: 100%;
-  height: 50px;
-  font-weight: bold;
-  font-size: 19px;
-  color: white;
-  transition: 0.6s;
-  border: none;
-  margin-top: 20px;
 }
 
 /* The SignUp Thingy At The Top's Style */
-.changepass-title {
+.OTP-title {
   font-style: italic;
   font-weight: bold;
   color: white;
@@ -59,7 +46,7 @@ body {
 }
 
 /* Buttons Style */
-.changepass-btn {
+.OTP-btn {
   padding: 10px;
   border-radius: 40px;
   display: block;
@@ -75,7 +62,7 @@ body {
 }
 
 /* Buttons On Hover Style */
-.changepass-btn:hover {
+.OTP-btn:hover {
   background-color: #c4c4c4;
   transition: 0.4s;
 }
@@ -125,21 +112,21 @@ body {
 
 /* Mobile Responsive */
 @media (max-width: 480px) {
-  .changepass-box {
+  .OTP-box {
     width: 90%;
     padding: 20px 25px;
     margin: 20px;
   }
 
-  .changepass-title {
+  .OTP-title {
     font-size: 30px;
   }
 
-  .changepass-btn {
+  .OTP-btn {
     max-width: 100%;
   }
 
-  .changepass-password {
+  .OTP-password {
     padding-right: 40px;
   }
 }

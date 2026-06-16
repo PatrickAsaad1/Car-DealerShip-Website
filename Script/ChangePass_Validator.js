@@ -3,7 +3,7 @@ function Check() {
   let Username = UsernameInput.value.trim();
   let EmailInput = document.querySelector(".input-email");
   let Email = EmailInput.value.trim();
-  
+
   // Reset lines to gray at the start of every check
   document.getElementById("Uline").style.backgroundColor = "#666";
   document.getElementById("Eline").style.backgroundColor = "#666";
@@ -58,4 +58,9 @@ function Check() {
   document.getElementById("action").innerHTML = "Code Sent Successfully!";
   document.getElementById("Uline").style.backgroundColor = "green";
   document.getElementById("Eline").style.backgroundColor = "green";
+
+  // Wait 2 seconds, then redirect
+  setTimeout(function () {
+    window.location.href = "OTP.html";
+  }, 2000);
 }

@@ -6,42 +6,30 @@
     <meta name="author" content="Patrick" />
     <meta
       name="description"
-      content="Change Password page for the Cars Dealership website."
+      content="OTP Verifivation page for the Cars Dealership website."
     />
-    <meta
-      name="keywords"
-      content="cars, dealership, login, username, password"
-    />
+    <meta name="keywords" content="cars, dealership, OTP, username, password" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>Change Password Page</title>
+    <title>OTP Verification Page</title>
     <style>
-      @import url("Style/ChangePass.css");
+      @import url("Style/OTP.css");
     </style>
   </head>
   <body class="background">
-    <div class="changepass-box">
-      <h2 class="changepass-title">Change Password</h2>
-
+    <div class="OTP-box">
+      <h2 class="OTP-title">Forgot Password</h2>
       <div>
-        <input class="input-email" placeholder="Email" required type="email" />
-        <div class="line" id="Eline"></div>
-      </div>
-
-      <!-- Username -->
-      <div>
-        <input class="input-username" placeholder="Username" type="text" required />
-        <div class="line" id="Uline"></div>
+        <input class="input-OTP" placeholder="Enter OTP Code" required />
+        <div class="line" id="Oline"></div>
       </div>
       <div>
         <p class="action" id="action">Awaiting Action...</p>
       </div>
       <div>
-        <button class="changepass-btn" onclick="Check()">
-          Send Reset Link
-        </button>
+        <button class="OTP-btn" onclick="Check()">Check OTP</button>
       </div>
       <div class="signup-section">
         <a class="signup-link" href="/Signup.html"
@@ -52,6 +40,6 @@
         </div>
       </div>
     </div>
-    <script src="Script/ChangePass_Validator.js"></script>
+    <script src="Script/OTP.js"></script>
   </body>
 </html>
