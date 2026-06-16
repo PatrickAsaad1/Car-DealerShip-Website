@@ -1,0 +1,144 @@
+/* Body Styling */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Background Style */
+.background {
+  background-image: url("Assets/Cars.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Change height to min-height */
+  width: 100%; /* Add this */
+}
+
+/* Login Form Style */
+.login-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 380px;
+  padding: 30px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+/* Username Input Styling */
+.input-username {
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+  transition: 0.6s;
+  border: none;
+}
+
+/* Password Input Styling */
+.input-password {
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+  transition: 0.6s;
+  border: none;
+  margin-top: 20px;
+}
+
+/* The Log In Thingy At The Top's Style */
+.login-title {
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
+}
+
+/* Buttons Style */
+.login-btn {
+  padding: 10px;
+  border-radius: 40px;
+  display: block;
+  margin: 30px auto 0;
+  width: 100%;
+  max-width: 300px;
+  height: 45px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Buttons On Hover Style */
+.login-btn:hover {
+  background-color: #c4c4c4;
+  transition: 0.4s;
+}
+
+/* UnderLine Each Input */
+.line {
+  height: 2px;
+  background-color: #666;
+  transition: background-color 0.5s ease;
+}
+
+
+.register-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-link {
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.forgot-link {
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-decoration: none;
+}
+
+.forgot-section {
+  margin-top: 10px;
+}
+.action {
+  color: white;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 20px 25px;
+    margin: 20px;
+  }
+
+  .login-title {
+    font-size: 30px;
+  }
+
+  .login-btn {
+    max-width: 100%;
+  }
+}
