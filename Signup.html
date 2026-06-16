@@ -6,24 +6,29 @@
     <meta name="author" content="Patrick" />
     <meta
       name="description"
-      content="Login page for the Cars Dealership website."
+      content="Sign Up page for the Cars Dealership website."
     />
     <meta
       name="keywords"
-      content="cars, dealership, login, username, password"
+      content="cars, dealership, sign up, username, password"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>Login Page</title>
+    <title>SignUp Page</title>
     <style>
-      @import url("Style/Login_Style.css");
+      @import url("Style/SignUp.css");
     </style>
   </head>
   <body class="background">
-    <div class="login-box">
-      <h2 class="login-title">Login</h2>
+    <div class="signup-box">
+      <h2 class="signup-title">SignUp</h2>
+
+      <div>
+        <input class="input-email" placeholder="Email" required type="email" />
+        <div class="line" id="Eline"></div>
+      </div>
 
       <!-- Username -->
       <div>
@@ -51,17 +56,15 @@
         <p class="action" id="action">Awaiting Action...</p>
       </div>
       <div>
-        <button class="login-btn" onclick="Check()">Log In</button>
+        <button class="signup-btn" onclick="Check()">SignUp</button>
       </div>
-      <div class="register-section">
-        <a class="register-link" href="Signup.html">
-          Don't Have Account? Register!
-        </a>
+      <div class="login-section">
+        <a class="login-link" href="Login.html">Have An Account? Login! </a>
         <div class="forgot-section">
           <a class="forgot-link" href="#">Forgot Password?</a>
         </div>
       </div>
     </div>
-    <script src="Script/Login_Validator.js"></script>
+    <script src="Script/SignUp_Validator.js"></script>
   </body>
 </html>
