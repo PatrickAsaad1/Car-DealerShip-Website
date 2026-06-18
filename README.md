@@ -34,11 +34,7 @@
 > **A fully-featured, client-side authentication system for a premium car dealership web platform.**
 > Clean dark UI. Bulletproof validation. Seamless multi-page user flow.
 
-<br />
-
-[`🚀 Live Demo`](#) &nbsp;&nbsp; [`🐛 Report Bug`](#) &nbsp;&nbsp; [`✨ Request Feature`](#)
-
-<br />
+<br /> 
 
 ---
 
