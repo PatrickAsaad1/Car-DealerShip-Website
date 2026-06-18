@@ -441,6 +441,7 @@ body {
 }
 
 @media (max-width: 480px) {
+
   .login-box,
   .signup-box,
   .OTP-box,
@@ -451,7 +452,9 @@ body {
     padding: 20px;
     margin: 10px;
   }
-}/* ============================================
+}
+
+/* ============================================
    INDEX PAGE STYLES
    ============================================ */
 
@@ -547,6 +550,26 @@ body {
 .hero-btn:hover {
   color: red;
   transform: scale(1.05);
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+  text-align: center;
+  margin: 0 auto 40px;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+
+  height: 320px;
+
+  width: 90%;
+  max-width: 650px;  /* 👈 bigger than before */
 }
 
 /* Tablet */
