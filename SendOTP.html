@@ -8,10 +8,7 @@
       name="description"
       content="Send OTP page for the Cars Dealership website."
     />
-    <meta
-      name="keywords"
-      content="cars, dealership, OTP, username, password"
-    />
+    <meta name="keywords" content="cars, dealership, OTP, username, password" />
     <title>Send OTP Page</title>
     <style>
       @import url("Style/Style.css");
@@ -21,12 +18,13 @@
     <div class="sendOTP-box">
       <h2 class="sendOTP-title">Send OTP</h2>
 
+      <!-- Email Input -->
       <div>
         <input class="input-email" placeholder="Email" required type="email" />
         <div class="line" id="Eline"></div>
       </div>
 
-      <!-- Username -->
+      <!-- Username Input -->
       <div>
         <input
           class="input-username"
@@ -36,12 +34,18 @@
         />
         <div class="line" id="Uline"></div>
       </div>
+
+      <!-- Action Message -->
       <div>
         <p class="action" id="action">Awaiting Action...</p>
       </div>
+
+      <!-- Send Button -->
       <div>
         <button class="sendOTP-btn" onclick="Check()">Send Reset Link</button>
       </div>
+
+      <!-- Links -->
       <div class="signup-section">
         <a class="signup-link" href="Signup.html"
           >Don't Have An Account? SignUp!

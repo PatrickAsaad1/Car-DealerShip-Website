@@ -16,10 +16,12 @@ function setupPasswordToggles() {
           passwordInput.type = "text";
           eyeIcon.classList.remove("fa-eye");
           eyeIcon.classList.add("fa-eye-slash");
+          console.log("Password Not Hidden");
         } else {
           passwordInput.type = "password";
           eyeIcon.classList.remove("fa-eye-slash");
           eyeIcon.classList.add("fa-eye");
+          console.log("Password Hidden");
         }
       });
     }
@@ -32,11 +34,13 @@ function setupPasswordToggles() {
 
 function getCurrentPage() {
   const path = window.location.pathname;
-  return path.split("/").pop();
+  const page = path.split("/").pop();
+  console.log("Got Page Successfully: " + page);
+  return page;
 }
 
 // ============================================
-// LOGIN Page Validation (UNCHANGED)
+// LOGIN Page Validation
 // ============================================
 
 function validateLogin() {
@@ -112,7 +116,7 @@ function validateLogin() {
 }
 
 // ============================================
-// SIGNUP Page Validation (UNCHANGED)
+// SIGNUP Page Validation
 // ============================================
 
 function validateSignup() {
@@ -120,15 +124,19 @@ function validateSignup() {
   let Username = UsernameInput ? UsernameInput.value.trim() : "";
   let PasswordInput = document.querySelector(".input-password");
   let Password = PasswordInput ? PasswordInput.value.trim() : "";
+  let ConfPassInput = document.querySelector(".input-confpassword");
+  let ConfPass = ConfPassInput ? ConfPassInput.value.trim() : "";
   let EmailInput = document.querySelector(".input-email");
   let Email = EmailInput ? EmailInput.value.trim() : "";
 
   const Uline = document.getElementById("Uline");
   const Pline = document.getElementById("Pline");
   const Eline = document.getElementById("Eline");
+  const cPline = document.getElementById("cPline");
   if (Uline) Uline.style.backgroundColor = "#666";
   if (Pline) Pline.style.backgroundColor = "#666";
   if (Eline) Eline.style.backgroundColor = "#666";
+  if (cPline) cPline.style.backgroundColor = "#666";
 
   if (Email === "" && Username === "" && Password === "") {
     console.log("ERROR: No Email, Username or Password Entered");
@@ -212,6 +220,22 @@ function validateSignup() {
     return;
   }
 
+  if (ConfPass === "") {
+    console.log("ERROR: User Left The ConfPass Input Empty");
+    document.getElementById("action").innerHTML =
+      "Please Confirm Your Password";
+    if (cPline) cPline.style.backgroundColor = "red";
+    return;
+  }
+
+  if (ConfPass !== Password) {
+    console.log("ERROR: User didn't confirm password correctly");
+    document.getElementById("action").innerHTML =
+      "Confirm Password Is Incorrect";
+    if (cPline) cPline.style.backgroundColor = "red";
+    return;
+  }
+
   if (Username.length >= 32) {
     console.log("ERROR: Username Too Long");
     document.getElementById("action").innerHTML =
@@ -233,10 +257,11 @@ function validateSignup() {
   if (Uline) Uline.style.backgroundColor = "green";
   if (Pline) Pline.style.backgroundColor = "green";
   if (Eline) Eline.style.backgroundColor = "green";
+  if (cPline) cPline.style.backgroundColor = "green";
 }
 
 // ============================================
-// SEND OTP Page Validation (UNCHANGED)
+// SEND OTP Page Validation
 // ============================================
 
 function validateSendOTP() {
@@ -308,7 +333,7 @@ function validateSendOTP() {
 }
 
 // ============================================
-// OTP Page Validation (UNCHANGED - hardcoded OTP stays)
+// OTP Page Validation
 // ============================================
 
 function validateOTP() {
@@ -335,7 +360,7 @@ function validateOTP() {
 }
 
 // ============================================
-// CHANGE PASS Page Validation (FIXED!)
+// CHANGE PASS Page Validation
 // ============================================
 
 function validateChangePass() {
@@ -383,7 +408,7 @@ function validateChangePass() {
     return;
   }
 
-  // 🔴 CRITICAL FIX: Check if passwords match
+  // Check if passwords match
   if (newPassword !== confirmPassword) {
     console.log("ERROR: Passwords Do Not Match");
     document.getElementById("action").innerHTML = "Passwords Do Not Match!";
@@ -446,12 +471,22 @@ function Check() {
       validateChangePass();
       break;
     default:
-      console.log("Unknown page: " + page);
+      // If page is not one of the valid pages, redirect to 404
+      const validPages = [
+        "Login.html",
+        "Signup.html",
+        "SendOTP.html",
+        "OTP.html",
+        "ChangePass.html",
+      ];
+      if (!validPages.includes(page)) {
+        window.location.href = "404.html";
+      }
   }
 }
 
 // ============================================
-// SETUP
+// SETUP - Runs when page loads
 // ============================================
 
 document.addEventListener("DOMContentLoaded", function () {
