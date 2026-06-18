@@ -419,7 +419,10 @@ body {
   background: black;
   transform: scale(1.05);
   color: red;
-  transition: background 0.3s, transform 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s,
+    color 0.3s;
 }
 
 /* ============================================
@@ -440,8 +443,27 @@ body {
   margin: 20px auto;
 }
 
-@media (max-width: 480px) {
+/* ============================================
+    About us page styles
+   ============================================ */
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  height: 300px;
 
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@media (max-width: 480px) {
   .login-box,
   .signup-box,
   .OTP-box,
@@ -569,7 +591,7 @@ body {
   height: 320px;
 
   width: 90%;
-  max-width: 650px;  /* 👈 bigger than before */
+  max-width: 650px;
 }
 
 /* Tablet */
