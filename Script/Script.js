@@ -7,7 +7,10 @@ function setupPasswordToggles() {
 
   wrappers.forEach(function (wrapper) {
     const eyeBox = wrapper.querySelector(".eyebox");
-    const passwordInput = wrapper.querySelector(".input-password");
+    // FIX: Look for BOTH .input-password AND .input-confpassword
+    const passwordInput =
+      wrapper.querySelector(".input-password") ||
+      wrapper.querySelector(".input-confpassword");
     const eyeIcon = eyeBox ? eyeBox.querySelector("i") : null;
 
     if (eyeBox && passwordInput && eyeIcon) {
