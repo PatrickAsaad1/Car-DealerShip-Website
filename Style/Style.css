@@ -563,6 +563,14 @@ body {
   padding: 20px;
 }
 
+/*Index Hero Content */
+.hero-content-index {
+  text-align: center;
+  margin-top: 140px;
+  padding: 20px;
+  margin-bottom: 99px;
+}
+
 .welcome-message {
   color: white;
   font-size: 56px;
