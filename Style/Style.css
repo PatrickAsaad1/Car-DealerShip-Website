@@ -12,94 +12,51 @@ body {
 }
 
 /* Background Styles - Each page gets its own */
-.background-login {
-  background-image: url("../Assets/Cars.png");
+.background-login,
+.background-signup,
+.background-otp,
+.background-sendotp,
+.background-changepass,
+.home-background {
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   width: 100%;
+}
+
+.background-login {
+  background-image: url("../Assets/Cars.png");
 }
 
 .background-signup {
   background-image: url("../Assets/SignUp_Background.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 .background-otp {
   background-image: url("../Assets/OTP.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 .background-sendotp {
   background-image: url("../Assets/SendOTP.jpeg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 .background-changepass {
   background-image: url("../Assets/ChangePass.jpeg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 /* Home Background */
 .home-background {
   background-image: url("../Assets/AutoHub.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  width: 100%;
 }
 
 /* ============================================
    BOX STYLES - Used by ALL pages
    ============================================ */
 
-/* Login Box */
-.login-box {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 380px;
-  padding: 30px 40px;
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
-
-/* SignUp Box */
-.signup-box {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 380px;
-  padding: 30px 40px;
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
-
-/* OTP Box */
-.OTP-box {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 380px;
-  padding: 30px 40px;
-  border-radius: 15px;
-}
-
-/* SendOTP Box */
-.sendOTP-box {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 380px;
-  padding: 30px 40px;
-  border-radius: 15px;
-}
-
-/* ChangePass Box */
+.login-box,
+.signup-box,
+.OTP-box,
+.sendOTP-box,
 .ChangePass-box {
   background-color: rgba(0, 0, 0, 0.85);
   width: 380px;
@@ -108,9 +65,25 @@ body {
   backdrop-filter: blur(5px);
 }
 
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+
+  .login-box,
+  .signup-box,
+  .OTP-box,
+  .sendOTP-box,
+  .ChangePass-box {
+    width: calc(100vw - 20px);
+    max-width: none;
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
 /* ============================================
    TITLE STYLES
    ============================================ */
+
 .signup-title {
   font-style: italic;
   font-weight: bold;
@@ -136,17 +109,6 @@ body {
 /* ============================================
    INPUT STYLES
    ============================================ */
-.input-confpassword {
-  background: transparent;
-  width: 100%;
-  height: 50px;
-  font-weight: bold;
-  font-size: 19px;
-  color: white;
-  transition: 0.6s;
-  border: none;
-  margin-top: 20px;
-}
 
 .input-username,
 .input-password,
@@ -165,6 +127,18 @@ body {
 .input-username,
 .input-password,
 .input-email {
+  margin-top: 20px;
+}
+
+.input-confpassword {
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+  transition: 0.6s;
+  border: none;
   margin-top: 20px;
 }
 
@@ -284,7 +258,6 @@ body {
    404 PAGE STYLES
    ============================================ */
 
-/* 404 page container */
 .error-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #0a1628;
@@ -298,27 +271,23 @@ body {
   align-items: center;
 }
 
-/* 404 big number */
 .error-page h1 {
   font-size: 6rem;
   color: #00d4ff;
   margin-bottom: 10px;
 }
 
-/* 404 sub heading */
 .error-page h2 {
   font-size: 2rem;
   color: #b0c4de;
   margin-bottom: 20px;
 }
 
-/* 404 description text */
 .error-page p {
   color: #b0c4de;
   margin-bottom: 40px;
 }
 
-/* 404 back to home button */
 .error-page a {
   display: inline-block;
   padding: 12px 30px;
@@ -329,7 +298,6 @@ body {
   font-weight: bold;
 }
 
-/* 404 button hover effect */
 .error-page a:hover {
   background: #00b8e6;
 }
@@ -340,189 +308,21 @@ body {
 
 /* Navbar */
 .Index-navbar {
-  background-color: rgba(0, 0, 0, 0.85);
-  width: 100%;
-  padding: 15px 30px;
-  backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  height: 60px;
-}
-
-/* Nav items */
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 16px;
-  transition: color 0.3s;
-  padding: 5px 10px;
-}
-
-.nav-link:hover {
-  color: red;
-}
-
-/* Hero Content */
-.hero-content {
-  text-align: center;
-  margin-top: 120px;
-  padding: 20px;
-}
-
-/* Welcome Message */
-.welcome-message {
-  color: white;
-  font-size: 56px;
-  font-weight: bold;
-  font-style: italic;
-  margin-bottom: 15px;
-  text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
-}
-
-/* Welcome Subtitle */
-.welcome-subtitle {
-  color: #ddd;
-  font-size: 22px;
-  font-weight: 400;
-  max-width: 600px;
-  margin: 0 auto;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  line-height: 1.6;
-}
-
-/* Hero Button */
-.hero-btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 40px;
-  background: black;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 50px;
-  transition:
-    background 0.3s,
-    transform 0.3s;
-}
-
-.hero-btn:hover {
-  background: black;
-  transform: scale(1.05);
-  color: red;
-  transition:
-    background 0.3s,
-    transform 0.3s,
-    color 0.3s;
-}
-
-/* ============================================
-   MOBILE RESPONSIVE
-   ============================================ */
-
-* {
-  box-sizing: border-box;
-}
-
-.login-box,
-.signup-box,
-.OTP-box,
-.sendOTP-box,
-.ChangePass-box {
-  width: 100%;
-  max-width: 450px;
-  margin: 20px auto;
-}
-
-/* ============================================
-    About us page styles
-   ============================================ */
-.about-us-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  height: 300px;
-
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-@media (max-width: 480px) {
-  .login-box,
-  .signup-box,
-  .OTP-box,
-  .sendOTP-box,
-  .ChangePass-box {
-    width: calc(100vw - 20px);
-    max-width: none;
-    padding: 20px;
-    margin: 10px;
-  }
-}
-
-/* ============================================
-   INDEX PAGE STYLES
-   ============================================ */
-
-.contact-us-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  max-width: 650px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  height: 300px;
-
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-/* ============================================
-    About us page styles
-   ============================================ */
-
-/* Navbar */
-.Index-navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
-
   background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(5px);
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 50px;
-
   padding: 0 20px;
   z-index: 1000;
 }
 
-/* Logo */
 .Index-navbar img {
   width: 180px;
   height: auto;
@@ -548,7 +348,6 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 18px;
-  white-space: nowrap;
   transition: color 0.3s;
 }
 
@@ -557,20 +356,18 @@ body {
 }
 
 /* Hero Content */
-.hero-content {
-  text-align: center;
-  margin-top: 140px;
-  padding: 20px;
-}
-
-/*Index Hero Content */
+.hero-content,
 .hero-content-index {
   text-align: center;
   margin-top: 140px;
   padding: 20px;
+}
+
+.hero-content-index {
   margin-bottom: 99px;
 }
 
+/* Welcome Message */
 .welcome-message {
   color: white;
   font-size: 56px;
@@ -580,14 +377,17 @@ body {
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
+/* Welcome Subtitle */
 .welcome-subtitle {
   color: #ddd;
   font-size: 22px;
+  font-weight: 400;
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
+/* Hero Button */
 .hero-btn {
   display: inline-block;
   margin-top: 25px;
@@ -597,6 +397,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 50px;
+  transition: 0.3s;
 }
 
 .hero-btn:hover {
@@ -604,27 +405,288 @@ body {
   transform: scale(1.05);
 }
 
+/* ============================================
+   ABOUT US PAGE STYLES
+   ============================================ */
+
 .about-us-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 25px;
   text-align: center;
   margin: 0 auto 40px;
-
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-
   height: 320px;
-
   width: 90%;
   max-width: 650px;
 }
 
-/* Tablet */
+/* ============================================
+   CONTACT US PAGE STYLES
+   ============================================ */
+
+.contact-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  height: 300px;
+}
+
+/* ============================================
+   BUY / BROWSE PAGE
+   ============================================ */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("../Assets/AutoHub.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.browse-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 120px auto 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.browse-title {
+  color: white;
+  font-size: 48px;
+  font-style: italic;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   SEARCH BAR
+   ============================================ */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.car-search {
+  width: 400px;
+  max-width: 90%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  color: red;
+}
+
+/* ============================================
+   CAR GRID
+   ============================================ */
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ============================================
+   CAR CARD
+   ============================================ */
+
+.car-card {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+}
+
+/* CAR IMAGE */
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================
+   CAR INFO
+   ============================================ */
+
+.car-info {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.car-info h3 {
+  margin: 0 0 8px 0;
+}
+
+.car-info p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.car-info h4 {
+  color: red;
+  font-size: 22px;
+  margin: 10px 0 15px 0;
+}
+
+/* ============================================
+   VIEW DETAILS BUTTON
+   ============================================ */
+
+.car-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  position: static;
+  float: none;
+}
+
+.car-btn:hover {
+  background: #d9d9d9;
+}
+
+/* ============================================
+   BMW DETAILS PAGE
+   ============================================ */
+
+.car-details-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 120px auto 40px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  overflow: hidden;
+  color: white;
+}
+
+.car-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.car-content {
+  padding: 30px;
+}
+
+.car-title {
+  font-size: 48px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.car-price {
+  font-size: 36px;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.spec-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.spec-box h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 40px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #d9d9d9;
+  transform: scale(1.05);
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
 @media (max-width: 900px) {
   .Index-navbar {
     gap: 25px;
@@ -643,13 +705,11 @@ body {
   }
 }
 
-/* Mobile */
 @media (max-width: 700px) {
   .Index-navbar {
     flex-direction: column;
     height: auto;
     padding: 15px;
-    gap: 15px;
   }
 
   .links {
@@ -658,34 +718,29 @@ body {
     gap: 12px;
   }
 
-  .nav-link {
-    font-size: 14px;
+  .hero-content,
+  .hero-content-index {
+    margin-top: 200px;
   }
 
-  .hero-content {
-    margin-top: 200px;
+  .browse-title {
+    font-size: 36px;
+  }
+
+  .car-title {
+    font-size: 32px;
+  }
+
+  .car-price {
+    font-size: 28px;
+  }
+
+  .car-image {
+    height: 280px;
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
-  .Index-navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-  }
-
-  .links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .nav-link {
-    font-size: 14px;
-  }
-
   .hero-content {
     margin-top: 220px;
   }
