@@ -1,89 +1,119 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact Us page for the Cars Dealership website." />
-    <meta name="keywords" content="cars, dealership, contact us, message, email" />
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Contact Us page for the Cars Dealership website." />
+      <meta name="keywords" content="cars, dealership, contact us, message, email" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
 
-    <title>Contact Us</title>
+      <title>Contact Us</title>
 
-    <style>
-      @import url("../Style/Style.css");
-    </style>
-  </head>
+      <style>
+        @import url("../Style/Style.css");
+      </style>
+    </head>
 
-  <body class="background-contact">
+    <body class="background-contact">
 
-    <!-- NAVBAR -->
-    <div class="Index-navbar">
-      <img src="../Assets/logo.png" alt="AutoHub Logo" />
+      <!-- NAVBAR -->
+      <div class="Index-navbar">
+        <img src="../Assets/logo.png" alt="AutoHub Logo" />
 
-      <div class="links">
-        <div class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-        </div>
+        <div class="links">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </div>
 
-        <div class="nav-item">
-          <a href="About-us.html" class="nav-link">About</a>
-        </div>
+          <div class="nav-item">
+            <a href="About-us.html" class="nav-link">About</a>
+          </div>
 
-        <div class="nav-item">
-          <a href="Buy-Browse.html" class="nav-link">Buy/browse</a>
-        </div>
+          <div class="nav-item">
+            <a href="Buy-Browse.html" class="nav-link">Buy/browse</a>
+          </div>
 
-        <div class="nav-item">
-          <a href="Contact-us.html" class="nav-link">Contact</a>
-        </div>
+          <div class="nav-item">
+            <a href="Contact-us.html" class="nav-link">Contact</a>
+          </div>
 
-        <div class="nav-item">
-          <a href="Login.html" class="nav-link">Login</a>
+          <div class="nav-item">
+            <a href="Login.html" class="nav-link">Login</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- PAGE CONTENT -->
-    <div class="hero-content">
+      <!-- PAGE CONTENT -->
+      <div class="hero-content">
 
-      <div class="login-box">
-        <h1 class="login-title">Contact Us</h1>
+        <div class="login-box">
 
-        <input type="text" class="input-username" placeholder="Your Name" />
-        <div class="line"></div>
+          <!-- FORM -->
+          <form action="https://formsubmit.co/yasenabdelfattah86@gmail.com" method="POST">
 
-        <input type="email" class="input-email" placeholder="Your Email" />
-        <div class="line"></div>
+            <!-- optional hidden settings -->
+            <input type="hidden" name="_captcha" value="false">
 
-        <input type="text" class="input-username" placeholder="Subject" />
-        <div class="line"></div>
+            <h1 class="login-title">Contact Us</h1>
 
-        <textarea
-          placeholder="Your Message"
-          style="
-            background: transparent;
-            width: 100%;
-            height: 90px;
-            font-weight: bold;
-            font-size: 19px;
-            color: rgba(255, 255, 255, 0.9);
-            border: none;
-            outline: none;
-            margin-top: 20px;
-            resize: none;
-          "
-        ></textarea>
+            <input
+              type="text"
+              class="input-username"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+            <div class="line"></div>
 
-        <div class="line"></div>
+            <input
+              type="email"
+              class="input-email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <div class="line"></div>
 
-        <button class="login-btn">Send Message</button>
+            <input
+              type="text"
+              class="input-username"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+            <div class="line"></div>
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              style="
+                background: transparent;
+                width: 100%;
+                height: 90px;
+                font-weight: bold;
+                font-size: 19px;
+                color: rgba(255, 255, 255, 0.9);
+                border: none;
+                outline: none;
+                margin-top: 20px;
+                resize: none;
+              "
+            ></textarea>
+
+            <div class="line"></div>
+
+            <button type="submit" class="login-btn">Send Message</button>
+
+          </form>
+
+        </div>
+
       </div>
 
-    </div>
-
-  </body>
-</html>
+    </body>
+  </html>
