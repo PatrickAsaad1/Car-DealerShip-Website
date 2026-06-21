@@ -3,8 +3,10 @@
 // ============================================
 
 function setupPasswordToggles() {
+  // Find all password wrapper elements
   const wrappers = document.querySelectorAll(".password-wrapper");
 
+  // Loop through each wrapper to set up toggle functionality
   wrappers.forEach(function (wrapper) {
     const eyeBox = wrapper.querySelector(".eyebox");
     const passwordInput =
@@ -12,14 +14,18 @@ function setupPasswordToggles() {
       wrapper.querySelector(".input-confpassword");
     const eyeIcon = eyeBox ? eyeBox.querySelector("i") : null;
 
+    // Only proceed if all required elements exist
     if (eyeBox && passwordInput && eyeIcon) {
+      // Add click event to toggle password visibility
       eyeBox.addEventListener("click", function () {
         if (passwordInput.type === "password") {
+          // Show password: change input type to text and update icon
           passwordInput.type = "text";
           eyeIcon.classList.remove("fa-eye");
           eyeIcon.classList.add("fa-eye-slash");
           console.log("Password Not Hidden");
         } else {
+          // Hide password: change input type to password and update icon
           passwordInput.type = "password";
           eyeIcon.classList.remove("fa-eye-slash");
           eyeIcon.classList.add("fa-eye");
@@ -35,6 +41,7 @@ function setupPasswordToggles() {
 // ============================================
 
 function getCurrentPage() {
+  // Extract the current page filename from the URL path
   const path = window.location.pathname;
   const page = path.split("/").pop();
   console.log("Got Page Successfully: " + page);
@@ -46,16 +53,21 @@ function getCurrentPage() {
 // ============================================
 
 function validateLogin() {
+  // Get input values and trim whitespace
   let UsernameInput = document.querySelector(".input-username");
   let Username = UsernameInput ? UsernameInput.value.trim() : "";
   let PasswordInput = document.querySelector(".input-password");
   let Password = PasswordInput ? PasswordInput.value.trim() : "";
 
+  // Get underline elements for styling feedback
   const Uline = document.getElementById("Uline");
   const Pline = document.getElementById("Pline");
+
+  // Reset underlines to default gray
   if (Uline) Uline.style.backgroundColor = "#666";
   if (Pline) Pline.style.backgroundColor = "#666";
 
+  // Validation: Both fields empty
   if (Username === "" && Password === "") {
     console.log("ERROR: No Username or Password Entered");
     document.getElementById("action").innerHTML =
@@ -65,6 +77,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Username empty
   if (Username === "") {
     console.log("ERROR: Empty Username Input");
     document.getElementById("action").innerHTML = "Please Enter Your Username";
@@ -72,6 +85,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Password empty
   if (Password === "") {
     console.log("ERROR: No Password Entered");
     document.getElementById("action").innerHTML = "Please Enter Your Password";
@@ -79,6 +93,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Password minimum length
   if (Password.length < 8) {
     console.log("ERROR: Password Too Short");
     document.getElementById("action").innerHTML =
@@ -87,6 +102,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Password maximum length
   if (Password.length >= 64) {
     console.log("ERROR: Password Too Long");
     document.getElementById("action").innerHTML =
@@ -95,6 +111,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Username maximum length
   if (Username.length >= 32) {
     console.log("ERROR: Username Too Long");
     document.getElementById("action").innerHTML =
@@ -103,6 +120,7 @@ function validateLogin() {
     return;
   }
 
+  // Validation: Username minimum length
   if (Username.length < 3) {
     console.log("ERROR: Username Too Short");
     document.getElementById("action").innerHTML =
@@ -111,6 +129,7 @@ function validateLogin() {
     return;
   }
 
+  // All validations passed
   console.log("Login Successful");
   document.getElementById("action").innerHTML = "Login Successful!";
   if (Uline) Uline.style.backgroundColor = "green";
@@ -122,6 +141,7 @@ function validateLogin() {
 // ============================================
 
 function validateSignup() {
+  // Get all input values
   let UsernameInput = document.querySelector(".input-username");
   let Username = UsernameInput ? UsernameInput.value.trim() : "";
   let PasswordInput = document.querySelector(".input-password");
@@ -131,15 +151,19 @@ function validateSignup() {
   let EmailInput = document.querySelector(".input-email");
   let Email = EmailInput ? EmailInput.value.trim() : "";
 
+  // Get all underline elements
   const Uline = document.getElementById("Uline");
   const Pline = document.getElementById("Pline");
   const Eline = document.getElementById("Eline");
   const cPline = document.getElementById("cPline");
+
+  // Reset all underlines to gray
   if (Uline) Uline.style.backgroundColor = "#666";
   if (Pline) Pline.style.backgroundColor = "#666";
   if (Eline) Eline.style.backgroundColor = "#666";
   if (cPline) cPline.style.backgroundColor = "#666";
 
+  // Validation: All fields empty
   if (Email === "" && Username === "" && Password === "") {
     console.log("ERROR: No Email, Username or Password Entered");
     document.getElementById("action").innerHTML =
@@ -150,6 +174,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Username and Password empty
   if (Username === "" && Password === "") {
     console.log("ERROR: No Username or Password Entered");
     document.getElementById("action").innerHTML =
@@ -159,6 +184,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Email and Password empty
   if (Email === "" && Password === "") {
     console.log("ERROR: No Email or Password Entered");
     document.getElementById("action").innerHTML =
@@ -168,6 +194,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Email and Username empty
   if (Email === "" && Username === "") {
     console.log("ERROR: No Email or Username Entered");
     document.getElementById("action").innerHTML =
@@ -177,6 +204,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Email empty
   if (Email === "") {
     console.log("ERROR: No Email Entered");
     document.getElementById("action").innerHTML = "Please Enter Your Email";
@@ -184,6 +212,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Username empty
   if (Username === "") {
     console.log("ERROR: Empty Username Input");
     document.getElementById("action").innerHTML = "Please Enter Your Username";
@@ -191,6 +220,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Password empty
   if (Password === "") {
     console.log("ERROR: No Password Entered");
     document.getElementById("action").innerHTML = "Please Enter Your Password";
@@ -198,6 +228,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Password minimum length
   if (Password.length < 8) {
     console.log("ERROR: Password Too Short");
     document.getElementById("action").innerHTML =
@@ -206,6 +237,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Email format (must contain @ and .)
   if (!Email.includes("@") || !Email.includes(".")) {
     console.log("ERROR: Invalid Email Format");
     document.getElementById("action").innerHTML =
@@ -214,6 +246,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Password maximum length
   if (Password.length >= 64) {
     console.log("ERROR: Password Too Long");
     document.getElementById("action").innerHTML =
@@ -222,6 +255,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Confirm password empty
   if (ConfPass === "") {
     console.log("ERROR: User Left The ConfPass Input Empty");
     document.getElementById("action").innerHTML =
@@ -230,6 +264,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Passwords don't match
   if (ConfPass !== Password) {
     console.log("ERROR: User didn't confirm password correctly");
     document.getElementById("action").innerHTML =
@@ -238,6 +273,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Username maximum length
   if (Username.length >= 32) {
     console.log("ERROR: Username Too Long");
     document.getElementById("action").innerHTML =
@@ -246,6 +282,7 @@ function validateSignup() {
     return;
   }
 
+  // Validation: Username minimum length
   if (Username.length < 3) {
     console.log("ERROR: Username Too Short");
     document.getElementById("action").innerHTML =
@@ -254,6 +291,7 @@ function validateSignup() {
     return;
   }
 
+  // All validations passed
   console.log("SignUp Successful");
   document.getElementById("action").innerHTML = "SignUp Successful!";
   if (Uline) Uline.style.backgroundColor = "green";
@@ -267,16 +305,21 @@ function validateSignup() {
 // ============================================
 
 function validateSendOTP() {
+  // Get input values
   let UsernameInput = document.querySelector(".input-username");
   let Username = UsernameInput ? UsernameInput.value.trim() : "";
   let EmailInput = document.querySelector(".input-email");
   let Email = EmailInput ? EmailInput.value.trim() : "";
 
+  // Get underline elements
   const Uline = document.getElementById("Uline");
   const Eline = document.getElementById("Eline");
+
+  // Reset underlines to gray
   if (Uline) Uline.style.backgroundColor = "#666";
   if (Eline) Eline.style.backgroundColor = "#666";
 
+  // Validation: Both fields empty
   if (Email === "" && Username === "") {
     console.log("ERROR: No Email or Username Entered");
     document.getElementById("action").innerHTML =
@@ -286,6 +329,7 @@ function validateSendOTP() {
     return;
   }
 
+  // Validation: Email empty
   if (Email === "") {
     console.log("ERROR: No Email Entered");
     document.getElementById("action").innerHTML = "Please Enter Your Email";
@@ -293,6 +337,7 @@ function validateSendOTP() {
     return;
   }
 
+  // Validation: Username empty
   if (Username === "") {
     console.log("ERROR: Empty Username Input");
     document.getElementById("action").innerHTML = "Please Enter Your Username";
@@ -300,6 +345,7 @@ function validateSendOTP() {
     return;
   }
 
+  // Validation: Email format
   if (!Email.includes("@") || !Email.includes(".")) {
     console.log("ERROR: Invalid Email Format");
     document.getElementById("action").innerHTML =
@@ -308,6 +354,7 @@ function validateSendOTP() {
     return;
   }
 
+  // Validation: Username maximum length
   if (Username.length >= 32) {
     console.log("ERROR: Username Too Long");
     document.getElementById("action").innerHTML =
@@ -316,6 +363,7 @@ function validateSendOTP() {
     return;
   }
 
+  // Validation: Username minimum length
   if (Username.length < 3) {
     console.log("ERROR: Username Too Short");
     document.getElementById("action").innerHTML =
@@ -324,11 +372,13 @@ function validateSendOTP() {
     return;
   }
 
+  // All validations passed - simulate sending OTP
   console.log("Code Sent Successfully");
   document.getElementById("action").innerHTML = "Code Sent Successfully!";
   if (Uline) Uline.style.backgroundColor = "green";
   if (Eline) Eline.style.backgroundColor = "green";
 
+  // Redirect to OTP page after 2 seconds
   setTimeout(function () {
     window.location.href = "OTP.html";
   }, 2000);
@@ -339,18 +389,22 @@ function validateSendOTP() {
 // ============================================
 
 function validateOTP() {
+  // Get OTP input value
   let OTPInput = document.querySelector(".input-OTP");
   let UserOTP = OTPInput ? OTPInput.value.trim() : "";
-  const OTP = "416964";
+  const OTP = "416964"; // Hardcoded OTP for demo purposes
 
   const Oline = document.getElementById("Oline");
   if (Oline) Oline.style.backgroundColor = "#666";
 
+  // Check if entered OTP matches the hardcoded OTP
   if (UserOTP === OTP) {
     console.log("OTP Code Verified Successfully");
     document.getElementById("action").innerHTML =
       "OTP Code Verified Successfully! Redirecting...";
     if (Oline) Oline.style.backgroundColor = "green";
+
+    // Redirect to change password page after 2 seconds
     setTimeout(function () {
       window.location.href = "ChangePass.html";
     }, 2000);
@@ -366,10 +420,10 @@ function validateOTP() {
 // ============================================
 
 function validateChangePass() {
-  // Get BOTH password inputs using class
+  // Get BOTH password inputs using class selector
   const passwordInputs = document.querySelectorAll(".input-password");
 
-  // First one = New Password, Second one = Confirm Password
+  // First input = New Password, Second input = Confirm Password
   const newPassword = passwordInputs[0] ? passwordInputs[0].value.trim() : "";
   const confirmPassword = passwordInputs[1]
     ? passwordInputs[1].value.trim()
@@ -385,7 +439,7 @@ function validateChangePass() {
     line.style.backgroundColor = "#666";
   });
 
-  // Check if both are filled
+  // Validation: Both fields empty
   if (newPassword === "" && confirmPassword === "") {
     console.log("ERROR: No Passwords Entered");
     document.getElementById("action").innerHTML =
@@ -396,6 +450,7 @@ function validateChangePass() {
     return;
   }
 
+  // Validation: New password empty
   if (newPassword === "") {
     console.log("ERROR: New Password is Empty");
     document.getElementById("action").innerHTML =
@@ -404,6 +459,7 @@ function validateChangePass() {
     return;
   }
 
+  // Validation: Confirm password empty
   if (confirmPassword === "") {
     console.log("ERROR: Confirm Password is Empty");
     document.getElementById("action").innerHTML =
@@ -412,7 +468,7 @@ function validateChangePass() {
     return;
   }
 
-  // Check if passwords match
+  // Validation: Passwords don't match
   if (newPassword !== confirmPassword) {
     console.log("ERROR: Passwords Do Not Match");
     document.getElementById("action").innerHTML = "Passwords Do Not Match!";
@@ -422,7 +478,7 @@ function validateChangePass() {
     return;
   }
 
-  // Check password length
+  // Validation: Password minimum length
   if (newPassword.length < 8) {
     console.log("ERROR: Password Too Short");
     document.getElementById("action").innerHTML =
@@ -433,6 +489,7 @@ function validateChangePass() {
     return;
   }
 
+  // Validation: Password maximum length
   if (newPassword.length >= 64) {
     console.log("ERROR: Password Too Long");
     document.getElementById("action").innerHTML =
@@ -443,6 +500,7 @@ function validateChangePass() {
     return;
   }
 
+  // All validations passed
   console.log("Password Changed Successfully");
   document.getElementById("action").innerHTML =
     "Password Changed Successfully!";
@@ -456,8 +514,10 @@ function validateChangePass() {
 // ============================================
 
 function Check() {
+  // Get current page name
   const page = getCurrentPage();
 
+  // Route to the appropriate validation function based on page
   switch (page) {
     case "Login.html":
       validateLogin();
@@ -475,6 +535,7 @@ function Check() {
       validateChangePass();
       break;
     default:
+      // If page is not one of the valid pages, redirect to 404
       const validPages = [
         "Login.html",
         "Signup.html",
@@ -493,6 +554,7 @@ function Check() {
 // ============================================
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize password toggle functionality for all password fields
   setupPasswordToggles();
   console.log("Current page: " + getCurrentPage());
 });
