@@ -1,8 +1,3 @@
-/* ============================================
-   SHARED STYLES - Used by ALL pages
-   ============================================ */
-
-/* Body Styling */
 body {
   margin: 0;
   display: flex;
@@ -11,7 +6,6 @@ body {
   min-height: 100vh;
 }
 
-/* Background Styles - Each page gets its own */
 .background-login,
 .background-signup,
 .background-otp,
@@ -44,14 +38,9 @@ body {
   background-image: url("../Assets/ChangePass.jpeg");
 }
 
-/* Home Background */
 .home-background {
   background-image: url("../Assets/AutoHub.png");
 }
-
-/* ============================================
-   BOX STYLES - Used by ALL pages
-   ============================================ */
 
 .login-box,
 .signup-box,
@@ -65,7 +54,6 @@ body {
   backdrop-filter: blur(5px);
 }
 
-/* Mobile responsiveness */
 @media (max-width: 480px) {
   .login-box,
   .signup-box,
@@ -78,10 +66,6 @@ body {
     margin: 10px;
   }
 }
-
-/* ============================================
-   TITLE STYLES
-   ============================================ */
 
 .signup-title {
   font-style: italic;
@@ -104,10 +88,6 @@ body {
   margin-top: 10px;
   font-size: 40px;
 }
-
-/* ============================================
-   INPUT STYLES
-   ============================================ */
 
 .input-username,
 .input-password,
@@ -141,10 +121,6 @@ body {
   margin-top: 20px;
 }
 
-/* ============================================
-   BUTTON STYLES
-   ============================================ */
-
 .login-btn,
 .signup-btn,
 .OTP-btn,
@@ -173,19 +149,11 @@ body {
   transition: 0.4s;
 }
 
-/* ============================================
-   LINE UNDER INPUTS
-   ============================================ */
-
 .line {
   height: 2px;
   background-color: #666;
   transition: background-color 0.5s ease;
 }
-
-/* ============================================
-   LINK STYLES
-   ============================================ */
 
 .register-link,
 .signup-link,
@@ -218,18 +186,10 @@ body {
   margin-top: 10px;
 }
 
-/* ============================================
-   ACTION MESSAGE
-   ============================================ */
-
 .action {
   color: white;
   font-family: Arial, sans-serif;
 }
-
-/* ============================================
-   PASSWORD WRAPPER + EYE ICON
-   ============================================ */
 
 .password-wrapper {
   position: relative;
@@ -252,10 +212,6 @@ body {
 .eyebox:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-
-/* ============================================
-   404 PAGE STYLES
-   ============================================ */
 
 .error-page {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -301,11 +257,6 @@ body {
   background: #00b8e6;
 }
 
-/* ============================================
-   INDEX PAGE STYLES
-   ============================================ */
-
-/* Navbar */
 .Index-navbar {
   position: fixed;
   top: 0;
@@ -328,19 +279,16 @@ body {
   display: block;
 }
 
-/* Links Container */
 .links {
   display: flex;
   align-items: center;
   gap: 35px;
 }
 
-/* Remove old nav-item spacing */
 .nav-item {
   margin: 0;
 }
 
-/* Nav Links */
 .nav-link {
   color: white;
   text-decoration: none;
@@ -354,7 +302,6 @@ body {
   color: red;
 }
 
-/* Hero Content */
 .hero-content,
 .hero-content-index {
   text-align: center;
@@ -366,7 +313,6 @@ body {
   margin-bottom: 99px;
 }
 
-/* Welcome Message */
 .welcome-message {
   color: white;
   font-size: 56px;
@@ -376,7 +322,6 @@ body {
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 
-/* Welcome Subtitle */
 .welcome-subtitle {
   color: #ddd;
   font-size: 22px;
@@ -386,7 +331,6 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Button */
 .hero-btn {
   display: inline-block;
   margin-top: 25px;
@@ -404,10 +348,6 @@ body {
   transform: scale(1.05);
 }
 
-/* ============================================
-   ABOUT US PAGE STYLES
-   ============================================ */
-
 .about-us-container {
   display: flex;
   flex-direction: column;
@@ -424,10 +364,6 @@ body {
   max-width: 650px;
 }
 
-/* ============================================
-   CONTACT US PAGE STYLES
-   ============================================ */
-
 .contact-us-container {
   display: flex;
   flex-direction: column;
@@ -442,10 +378,6 @@ body {
   border-radius: 10px;
   height: 300px;
 }
-
-/* ============================================
-   BUY / BROWSE PAGE
-   ============================================ */
 
 html,
 body {
@@ -476,10 +408,6 @@ body {
   margin-bottom: 30px;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
-
-/* ============================================
-   SEARCH BAR
-   ============================================ */
 
 .search-container {
   display: flex;
@@ -514,20 +442,12 @@ body {
   color: red;
 }
 
-/* ============================================
-   CAR GRID
-   ============================================ */
-
 .cars-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   align-items: stretch;
 }
-
-/* ============================================
-   CAR CARD
-   ============================================ */
 
 .car-card {
   background: rgba(0, 0, 0, 0.75);
@@ -543,17 +463,12 @@ body {
   transform: translateY(-8px);
 }
 
-/* CAR IMAGE */
 .car-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   display: block;
 }
-
-/* ============================================
-   CAR INFO
-   ============================================ */
 
 .car-info {
   padding: 20px;
@@ -579,10 +494,6 @@ body {
   margin: 10px 0 15px 0;
 }
 
-/* ============================================
-   VIEW DETAILS BUTTON
-   ============================================ */
-
 .car-btn {
   display: block;
   width: 100%;
@@ -604,237 +515,202 @@ body {
   background: #d9d9d9;
 }
 
-/* ============================================
-   BMW DETAILS PAGE
-   ============================================ */
+.car-details-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
+}
 
 .car-details-container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 120px auto 40px;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
+  width: 100%;
+  max-width: 850px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
   overflow: hidden;
   color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.car-image-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #000;
 }
 
 .car-image {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.car-image:hover {
+  transform: scale(1.05);
 }
 
 .car-content {
-  padding: 30px;
+  padding: 30px 35px;
 }
 
 .car-title {
-  font-size: 42px;
+  font-size: 36px;
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  color: white;
 }
 
 .car-price {
-  font-size: 32px;
-  color: red;
+  font-size: 28px;
+  color: #ff4444;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .spec-box {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 15px;
   border-radius: 10px;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .spec-box h3 {
-  color: red;
-  margin-bottom: 10px;
+  color: #ff4444;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.spec-box p {
+  color: #eee;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .description {
-  color: #ddd;
+  color: #ccc;
   line-height: 1.8;
-  margin-bottom: 30px;
+  font-size: 15px;
+  margin-bottom: 25px;
 }
 
 .buy-btn {
   display: inline-block;
-  padding: 15px 40px;
-  border-radius: 40px;
-  background: white;
-  color: black;
+  padding: 14px 45px;
+  border-radius: 50px;
+  background: #ff4444;
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
   transition: 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .buy-btn:hover {
-  background: #d9d9d9;
+  background: #cc0000;
   transform: scale(1.05);
 }
 
-/* ============================================
-   MOBILE RESPONSIVE
-   ============================================ */
+.Bmw-m4 {
+  background-image: url("../Assets/bmw-m4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-/* Tablets and smaller laptops */
 @media (max-width: 1024px) {
   .car-details-container {
     max-width: 95%;
-    margin: 100px auto 30px;
   }
-
-  .car-image {
-    height: 350px;
+  .car-image-wrapper {
+    height: 300px;
   }
-
   .car-title {
-    font-size: 36px;
+    font-size: 32px;
   }
-
   .car-price {
-    font-size: 28px;
+    font-size: 26px;
   }
-
-  .specs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  }
-}
-
-/* Mobile phones */
-@media (max-width: 768px) {
-  .car-details-container {
-    width: 95%;
-    margin: 90px auto 20px;
-    border-radius: 10px;
-  }
-
-  .car-image {
-    height: 250px;
-  }
-
-  .car-content {
-    padding: 20px;
-  }
-
-  .car-title {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .car-price {
-    font-size: 24px;
-    text-align: center;
-  }
-
   .specs-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-  }
-
-  .spec-box {
-    padding: 12px;
-  }
-
-  .spec-box h3 {
-    font-size: 14px;
-  }
-
-  .spec-box p {
-    font-size: 13px;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .buy-btn {
-    display: block;
-    text-align: center;
-    padding: 12px 20px;
   }
 }
 
-/* Small phones */
-@media (max-width: 480px) {
-  .car-details-container {
-    width: 98%;
-    margin: 80px auto 15px;
-    border-radius: 8px;
-  }
-
-  .car-image {
-    height: 200px;
-  }
-
-  .car-content {
-    padding: 15px;
-  }
-
-  .car-title {
-    font-size: 22px;
-  }
-
-  .car-price {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .specs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .spec-box {
-    padding: 10px;
-  }
-
-  .spec-box h3 {
-    font-size: 12px;
-  }
-
-  .spec-box p {
-    font-size: 12px;
-  }
-
-  .description {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .buy-btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-}
-
-/* Navbar responsive */
 @media (max-width: 900px) {
   .Index-navbar {
     gap: 25px;
   }
-
   .links {
     gap: 15px;
   }
-
   .nav-link {
     font-size: 15px;
   }
-
   .Index-navbar img {
     width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .car-details-wrapper {
+    padding: 80px 15px 30px;
+  }
+  .car-details-container {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  .car-image-wrapper {
+    height: 250px;
+  }
+  .car-content {
+    padding: 20px 22px;
+  }
+  .car-title {
+    font-size: 28px;
+  }
+  .car-price {
+    font-size: 24px;
+  }
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .spec-box {
+    padding: 10px;
+  }
+  .spec-box h3 {
+    font-size: 11px;
+  }
+  .spec-box p {
+    font-size: 13px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .buy-btn {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 15px;
   }
 }
 
@@ -844,26 +720,21 @@ body {
     height: auto;
     padding: 15px;
   }
-
   .links {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
   }
-
   .hero-content,
   .hero-content-index {
     margin-top: 180px;
   }
-
   .browse-container {
     margin-top: 180px;
   }
-
-  .car-details-container {
-    margin-top: 180px;
+  .car-details-wrapper {
+    padding-top: 180px;
   }
-
   .browse-title {
     font-size: 36px;
   }
@@ -873,44 +744,98 @@ body {
   .hero-content {
     margin-top: 200px;
   }
-
   .browse-container {
     margin-top: 200px;
   }
-
-  .car-details-container {
-    margin-top: 200px;
+  .car-details-wrapper {
+    padding-top: 200px;
   }
 }
 
 @media (max-width: 480px) {
+  .car-details-wrapper {
+    padding: 70px 10px 20px;
+  }
+  .car-image-wrapper {
+    height: 200px;
+  }
+  .car-content {
+    padding: 15px 18px;
+  }
+  .car-title {
+    font-size: 22px;
+  }
+  .car-price {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .spec-box {
+    padding: 8px 10px;
+  }
+  .spec-box h3 {
+    font-size: 10px;
+  }
+  .spec-box p {
+    font-size: 12px;
+  }
+  .description {
+    font-size: 13px;
+  }
+  .buy-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
   .hero-content,
   .hero-content-index {
     margin-top: 220px;
   }
-
   .browse-container {
     margin-top: 220px;
   }
-
-  .car-details-container {
-    margin-top: 220px;
+  .car-details-wrapper {
+    padding-top: 220px;
   }
 }
-
-/* ============================================
-   SPECIFIC FIX FOR 1024x599 SCREEN
-   ============================================ */
 
 @media (max-width: 1024px) and (max-height: 600px) {
   .browse-container {
     margin-top: 650px;
   }
-
-  .car-details-container {
-    margin-top: 700px;
+  .car-details-wrapper {
+    padding-top: 90px;
   }
-
+  .car-image-wrapper {
+    height: 200px;
+  }
+  .car-details-container {
+    max-width: 750px;
+  }
+  .car-content {
+    padding: 20px 25px;
+  }
+  .car-title {
+    font-size: 28px;
+  }
+  .car-price {
+    font-size: 22px;
+  }
+  .specs-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .spec-box {
+    padding: 8px 10px;
+  }
+  .spec-box h3 {
+    font-size: 11px;
+  }
+  .spec-box p {
+    font-size: 12px;
+  }
   .hero-content,
   .hero-content-index {
     margin-top: 200px;
