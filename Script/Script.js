@@ -7,7 +7,6 @@ function setupPasswordToggles() {
 
   wrappers.forEach(function (wrapper) {
     const eyeBox = wrapper.querySelector(".eyebox");
-    // FIX: Look for BOTH .input-password AND .input-confpassword
     const passwordInput =
       wrapper.querySelector(".input-password") ||
       wrapper.querySelector(".input-confpassword");
@@ -363,7 +362,7 @@ function validateOTP() {
 }
 
 // ============================================
-// CHANGE PASS Page Validation
+// CHANGE PASS Page Validation - FIXED
 // ============================================
 
 function validateChangePass() {
@@ -376,8 +375,10 @@ function validateChangePass() {
     ? passwordInputs[1].value.trim()
     : "";
 
-  // Get all lines (there should be 2)
-  const lines = document.querySelectorAll(".line");
+  // FIXED: Get lines by their specific IDs instead of relying on order
+  const line1 = document.getElementById("Pline1");
+  const line2 = document.getElementById("Pline2");
+  const lines = [line1, line2].filter((line) => line !== null);
 
   // Reset lines to gray
   lines.forEach(function (line) {
@@ -474,7 +475,6 @@ function Check() {
       validateChangePass();
       break;
     default:
-      // If page is not one of the valid pages, redirect to 404
       const validPages = [
         "Login.html",
         "Signup.html",
