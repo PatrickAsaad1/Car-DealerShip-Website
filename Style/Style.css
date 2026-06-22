@@ -750,6 +750,14 @@ body {
   background-attachment: fixed;
 }
 
+.BMW-iX3 {
+  background-image: url("../Assets/BMW.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ======================================== */
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 /* ======================================== */
