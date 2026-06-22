@@ -686,6 +686,14 @@ body {
   background-attachment: fixed;
 }
 
+.Porche-911 {
+  background-image: url("../Assets/Porche 911.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .Audi-RS7 {
   background-image: url("../Assets/Audi-rs7.jpeg");
   background-size: cover;
