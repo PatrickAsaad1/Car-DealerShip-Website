@@ -421,7 +421,7 @@ body {
   margin: 0;
 }
 
-body {
+.browse-page {
   background-image: url("../Assets/AutoHub.png");
   background-size: cover;
   background-position: center;
@@ -686,6 +686,14 @@ body {
   background-attachment: fixed;
 }
 
+.Dodge-Demon {
+  background-image: url("../Assets/2018-Dodge.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .Porche-911 {
   background-image: url("../Assets/Porche 911.jpeg");
   background-size: cover;
@@ -694,8 +702,40 @@ body {
   background-attachment: fixed;
 }
 
-.Audi-RS7 {
+.Audi-rs7 {
   background-image: url("../Assets/Audi-rs7.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Mercades {
+  background-image: url("../Assets/auto3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Ford {
+  background-image: url("../Assets/auto4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Tesla {
+  background-image: url("../Assets/auto4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Tesla-cybertruck {
+  background-image: url("../Assets/cybertruck.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -879,7 +919,7 @@ body {
 /* Landscape orientation on small screens (e.g., phones in landscape) */
 @media (max-width: 1024px) and (max-height: 600px) {
   .browse-container {
-    margin-top: 650px;
+    margin-top: 1150px;
   }
   .car-details-wrapper {
     padding-top: 90px;
