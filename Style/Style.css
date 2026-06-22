@@ -742,6 +742,14 @@ body {
   background-attachment: fixed;
 }
 
+.Hummer-EV {
+  background-image: url("../Assets/2026 GMC Hummer EVs.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* ======================================== */
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 /* ======================================== */
