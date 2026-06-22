@@ -85,32 +85,6 @@ Every page shares a single, unified `style.css` and `auth.js` — keeping the co
 
 ---
 
-## 📁 Project Structure
-
-```
-Car-DealerShip-Website/
-│
-├── 📂 Assets/                   
-│   ├── 🖼️  Cars.png           
-│   ├── 🖼️  OTP.jpg              
-│   ├── 🖼️  SendOTP.jpeg         
-│   └── 🖼️  SignUp_Background.png 
-│
-├── 📂 Style/
-│   └── 🎨 style.css             # Unified stylesheet — all pages
-│
-├── 📂 Script/
-│   └── ⚙️  auth.js              # Unified logic — all pages
-│
-├── 📄 Login.html                 # Entry point — user login
-├── 📄 Signup.html                # New user registration
-├── 📄 SendOTP.html               # Password recovery — request OTP
-├── 📄 OTP.html                   # OTP code verification
-├── 📄 ChangePass.html            # Set new password
-└── 📄 LICENSE                    # MIT License
-```
----
-
 ## 📄 Pages Breakdown
 
 ### 🔑 `Login.html`
