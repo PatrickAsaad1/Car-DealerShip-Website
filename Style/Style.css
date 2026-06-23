@@ -687,7 +687,7 @@ body {
 }
 
 .Dodge-Demon {
-  background-image: url("../Assets/2018-Dodge.jpeg");
+  background-image: url("../Assets/3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -695,7 +695,7 @@ body {
 }
 
 .Porche-911 {
-  background-image: url("../Assets/Porche 911.jpeg");
+  background-image: url("../Assets/5.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -703,15 +703,23 @@ body {
 }
 
 .Audi-rs7 {
-  background-image: url("../Assets/Audi-rs7.jpeg");
+  background-image: url("../Assets/7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.Mercades {
-  background-image: url("../Assets/auto3.png");
+.Dodge-challenger {
+  background-image: url("../Assets/2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Mercedes {
+  background-image: url("../Assets/8.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -719,15 +727,7 @@ body {
 }
 
 .Ford {
-  background-image: url("../Assets/auto4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.Tesla {
-  background-image: url("../Assets/auto4.jpg");
+  background-image: url("../Assets/9.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -735,7 +735,7 @@ body {
 }
 
 .Tesla-cybertruck {
-  background-image: url("../Assets/cybertruck.png");
+  background-image: url("../Assets/1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -743,7 +743,7 @@ body {
 }
 
 .Hummer-EV {
-  background-image: url("../Assets/2026 GMC Hummer EVs.jpeg");
+  background-image: url("../Assets/4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -751,7 +751,7 @@ body {
 }
 
 .BMW-iX3 {
-  background-image: url("../Assets/BMW.jpeg");
+  background-image: url("../Assets/6.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
