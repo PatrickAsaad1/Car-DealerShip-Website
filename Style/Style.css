@@ -726,6 +726,14 @@ body {
   background-attachment: fixed;
 }
 
+.Peugeot-208 {
+  background-image: url("../Assets/10.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .Ford {
   background-image: url("../Assets/9.jpg");
   background-size: cover;
