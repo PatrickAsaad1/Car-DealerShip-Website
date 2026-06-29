@@ -1023,3 +1023,123 @@ body {
     margin-top: 200px;
   }
 }
+
+/* ===== CONTACT DEALER PAGE ===== */
+
+.contact-dealer-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 400px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.contact-dealer-container {
+    width: 67%;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+
+.dealer-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.dealer-subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.dealer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dealer-input,
+.dealer-message {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.dealer-input::placeholder,
+.dealer-message::placeholder {
+  color: #bbb;
+}
+
+.dealer-message {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.dealer-info {
+  margin-top: 35px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 25px;
+}
+
+.dealer-info h3 {
+  color: #ff4444;
+  margin-bottom: 15px;
+}
+
+.dealer-info p {
+  color: #ddd;
+  margin: 8px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contact-dealer-container {
+    padding: 25px;
+  }
+
+  .dealer-title {
+    font-size: 30px;
+  }
+
+  .dealer-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-dealer-container {
+    padding: 20px;
+  }
+
+  .dealer-title {
+    font-size: 26px;
+  }
+
+  .dealer-input,
+  .dealer-message {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+body.Audi-rs7 {
+  overflow-y: auto;
+}

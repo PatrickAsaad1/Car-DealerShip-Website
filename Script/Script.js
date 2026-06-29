@@ -101,9 +101,14 @@ function validateLogin() {
     return;
   }
 
-  document.getElementById("action").innerHTML = "Login Successful!";
+  document.getElementById("action").innerHTML =
+    "Login Successful! Redirecting...";
   if (Uline) Uline.style.backgroundColor = "green";
   if (Pline) Pline.style.backgroundColor = "green";
+
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 1000);
 }
 
 // ============================================
